@@ -126,7 +126,7 @@ namespace Content.IntegrationTests.Tests.Body
                 var coordinates = new EntityCoordinates(grid.Value, center);
                 human = entityManager.SpawnEntity("HumanLungDummy", coordinates);
                 relevantAtmos = entityManager.GetComponent<GridAtmosphereComponent>(grid.Value);
-                startingMoles = 105f; // Hardcoded because GetMapMoles returns 900 here for some reason. Reserve 100 -> 110
+                startingMoles = 100f; // Hardcoded because GetMapMoles returns 900 here for some reason.
 
 #pragma warning disable NUnit2045
                 Assert.That(entityManager.TryGetComponent(human, out body), Is.True);
